@@ -65,7 +65,9 @@ Phụ trách đầu ra kiểm thử và đo lường: tổng hợp baseline và 
 
 ### Exit ticket
 
-Chờ thành viên tự ghi một điều học được và một điều còn chưa chắc.
+Một điều học được: Chỉ số pass rate cao không đồng nghĩa với việc hệ thống sẵn sàng chạy pilot thật; ở sự cố S5, trợ lý AI đạt độ chính xác 100% nhưng kho HCM-B2B ngốn tới 10.382đ/ticket (đắt hơn làm tay 10.000đ). Cần kết hợp cả cổng giới hạn phạm vi (pilot scope) và các monitor theo dõi chi phí theo kho để phát hiện sớm các phân khúc bị lỗ.
+
+Một điều còn chưa chắc: Cơ chế kiểm soát chống hoàn tiền lặp lại hiện chạy đúng trong môi trường mô phỏng tuần tự của lab; tuy nhiên ngoài thực tế khi nhiều nhân viên hoặc worker cùng thao tác ghi sổ phân tán đồng thời, cần cơ chế khóa giao dịch (database transaction hoặc idempotency key) như thế nào để đảm bảo tuyệt đối không bị chi trùng.
 
 ## NguyenThanhCong-2A202603789
 
@@ -85,7 +87,9 @@ Phiếu A A1–A4; Phiếu B B3/B7.4/B8; Phiếu C C3/C8/C12; `config/operating_
 
 ### Exit ticket
 
-Chờ thành viên tự ghi một điều học được và một điều còn chưa chắc.
+Một điều học được: Tính toán ROI và chi phí mỗi ticket phải bóc tách theo từng phân khúc kho (như kho HCM-B2B giá trị cao); không được dùng ROI trung bình để che giấu những nhóm nghiệp vụ đang bị lỗ so với làm tay.
+
+Một điều còn chưa chắc: Sự biến động của giá API LLM và hành vi người dùng ngoài môi trường thực tế (drift theo thời gian) sẽ ảnh hưởng như thế nào đến mức tiết kiệm ròng và trần ngân sách hoàn tiền 1.800.000đ/ngày đã cam kết.
 
 ## DongVanQuyen-2A202603769
 
@@ -105,7 +109,9 @@ Phiếu B B4–B5/B7.5–B7.6; Phiếu C C4/C10–C11; `config/operating_gates.j
 
 ### Exit ticket
 
-Chờ thành viên tự ghi một điều học được và một điều còn chưa chắc.
+Một điều học được: Tự động hóa phải luôn đi kèm runbook và ngưỡng dừng khẩn cấp (kill switch); quy định dừng trong tối đa 5 phút và chuyển giao sang quy trình thủ công (manual) là then chốt để bảo vệ dữ liệu khách hàng và tránh xung đột với các đối tác vận chuyển.
+
+Một điều còn chưa chắc: Khả năng đáp ứng SLA 60 phút của nhân sự trực duyệt (chị Hạnh) khi xảy ra dồn tải giờ cao điểm nếu số lượng ca cần người duyệt vượt quá công suất 6 ca/giờ mà chưa kịp huy động nhân sự dự phòng.
 
 ## Quyết định chung của team
 
