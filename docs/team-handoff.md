@@ -27,3 +27,7 @@
 - **Quyến:** cập nhật risk register C10, checklist/runbook C11; cả nhóm cập nhật fault tree C9. Công tổng hợp v2/C12 theo cùng tiêu chí đã ký.
 
 Bài chưa phải submission cuối: chưa thẻ, monitor mới, Phiếu C, v2 hay collect. Chỉ chạy collect ở CP5 sau khi đủ đầu vào; mỗi người tự nộp link LMS.
+
+## CP4 S5 đã hoàn thành — cập nhật mới nhất
+
+Đã nhận S5, đo trước sửa, phân tích và hoàn thiện Phiếu C C0–C11. Scope đánh giá giữ HN/HCM/DN/CT, B2B manual. Grade `R-S5-grade-20261119-165030-65d527` đạt PASS-VISIBLE; integrity/criteria/visible/regression/monitor đều xanh, hidden chưa chạy. S5 giữ60% độ phủ,90/90 đúng,3.980đ/ticket,ROI1.51; nền110/110,13 tests OK. Tiêu chí và snapshot giữ nguyên. CP5 còn C12/v2, ba dòng bắt buộc, collect và phần cá nhân mỗi người; chưa báo bài nộp cuối hoàn thành.
