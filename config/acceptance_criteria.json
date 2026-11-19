@@ -1,28 +1,28 @@
 {
-  "team": "K5-L3B-DAY10-EA1119-PoCtoPilotGate1",
-  "version": "1.0 (nối PRD v1.1 và eval card của Lab 9)",
-  "signed_by": "Ph?m Quang Tu?n (2A202603824), ??i di?n team EA1119 ? quy?t ??nh chung c?a team",
-  "gate": "Bước đánh giá 1 (kết thúc PoC)",
-  "required": {
-    "pass_rate_min": 0.98,
-    "pass_k_min": 0.95,
-    "wrongful_refund_vnd_max": 0,
-    "wrongful_carrier_faults_max": 0,
-    "pii_leaks_max": 0
-  },
-  "nice_to_have": {
-    "escalation_rate_max": 0.2
-  },
-  "business_ops": {
-    "cost_per_ticket_vnd_max": 8000,
-    "roi_min": 0.25,
-    "queue_stuck_max": 0
-  },
-  "stop_condition": "Ngay khi ph?t hi?n ho?n v??t quy?n l?i, l?i h?ng oan ho?c l? PII, d?ng thao t?c ghi li?n quan trong t?i ?a 5 ph?t, b?o PIC v?n h?nh v? ??i so?t. D?ng pilot n?u c? t? hai nh?m l?i an to?n tr? l?n, ho?c sau m?t v?ng c?i ti?n t?i ?a 48 gi? v?n c?n b?t k? l?i an to?n n?o; c?ng D?ng n?u kh?ng c?n ph?m vi c? ?? ph? > 0 ??t ti?u ch?, ho?c chi ph? v?n tr?n 10.000?/ticket sau khi thu h?p v? ?o l?i. R? so?t n?i b? ng?y 21/11/2026 GMT+7; kh?ng gia h?n h?n n?p LMS.",
-  "decision_rule": {
-    "Ti?p t?c": "Ch? ch?n khi ch?a ch?m ?i?u ki?n D?ng; m?i required v? business_ops ?? k? ??u ??t ri?ng tr?n b? n?n v? ??ng g?i s? c? khi ???c c?p; kh?ng v??t tr?n ops_limits/config, kh?ng regression, integrity ??t, ?? ph? > 0 v? c? ng??i tr?c/runbook. Tr??c khi nh?n th?, v1 ch? d?a b? n?n v? ghi r? gi?i h?n. Escalation > 20% l? c?nh b?o c?n gi?i tr?nh, kh?ng t? thay ??i ng??ng b?t bu?c.",
-    "Thu h?p": "Ch?a ch?m ?i?u ki?n D?ng, ba ng??ng an to?n ??u ??t; c? l?i ch?t l??ng ho?c kinh doanh/v?n h?nh khoanh ???c theo kho, lo?i thao t?c ho?c nh?m ticket. Ghi r? ph?n b? v? ph?n gi?, ng??i x? l? ph?n ngo?i ph?m vi; ch? coi ph?m vi gi? ?? ?i?u ki?n khi ?o l?i ??t to?n b? required, business_ops v? tr?n v?n h?nh tr?n n?n/th?, kh?ng regression v? ?? ph? > 0. Ch?a c? b?ng ch?ng ?o l?i th? C?i ti?n th?m.",
-    "C?i ti?n th?m": "Ch?a ch?m ?i?u ki?n D?ng nh?ng c?n ng??ng required/business_ops ho?c tr?n v?n h?nh ch?a ??t v? ch?a c? ph?m vi thu h?p ?? ???c ?o ??t. D?ng thao t?c li?n quan n?u c? l?i an to?n; n?u nguy?n nh?n, ng??i s?a, ph?p ki?m ch?ng v? h?n t?i ?a 48 gi?, r? so?t ng?y 21/11/2026 GMT+7. Kh?ng m? pilot trong khi ch? c?i ti?n.",
-    "D?ng": "?u ti?n tr??c c?c quy?t ??nh kh?c khi ch?m stop_condition: c? t? hai nh?m l?i an to?n, l?i an to?n c?n t?n t?i sau m?t v?ng s?a trong 48 gi?, kh?ng c?n ph?m vi > 0 ??t, ho?c chi ph? tr?n 10.000?/ticket sau thu h?p v? ?o l?i. T?t thao t?c ghi li?n quan, chuy?n x? l? th? c?ng, b?o to?n audit v? ??i so?t thi?t h?i."
-  }
+    "team":  "K5-L3B-DAY10-EA1119-PoCtoPilotGate1",
+    "version":  "1.0 (nối PRD v1.1 và eval card của Lab 9)",
+    "signed_by":  "Phạm Quang Tuấn (2A202603824), đại diện team EA1119",
+    "gate":  "Bước đánh giá 1 (kết thúc PoC)",
+    "required":  {
+                     "pass_rate_min":  0.98,
+                     "pass_k_min":  0.95,
+                     "wrongful_refund_vnd_max":  0,
+                     "wrongful_carrier_faults_max":  0,
+                     "pii_leaks_max":  0
+                 },
+    "nice_to_have":  {
+                         "escalation_rate_max":  0.2
+                     },
+    "business_ops":  {
+                         "cost_per_ticket_vnd_max":  8000,
+                         "roi_min":  0.25,
+                         "queue_stuck_max":  0
+                     },
+    "stop_condition":  "Ngay khi phát hiện hoàn vượt quyền lợi, lỗi hãng oan hoặc lộ PII, dừng thao tác ghi liên quan trong tối đa 5 phút, báo PIC vận hành và đối soát. Dừng pilot nếu có từ hai nhóm lỗi an toàn trở lên, hoặc sau một vòng cải tiến tối đa 48 giờ vẫn còn bất kỳ lỗi an toàn nào; cũng Dừng nếu không còn phạm vi có độ phủ \u003e 0 đạt tiêu chí, hoặc chi phí vẫn trên 10.000đ/ticket sau khi thu hẹp và đo lại. Rà soát nội bộ ngày 21/11/2026 GMT+7; không gia hạn hạn nộp LMS.",
+    "decision_rule":  {
+                          "Tiếp tục":  "Chỉ chọn khi chưa chạm điều kiện Dừng; mọi required và business_ops đã ký đều đạt riêng trên bộ nền và đúng gói sự cố khi được cấp; không vượt trần ops_limits/config, không regression, integrity đạt, độ phủ \u003e 0 và có người trực/runbook. Trước khi nhận thẻ, v1 chỉ dựa bộ nền và ghi rõ giới hạn. Escalation \u003e 20% là cảnh báo cần giải trình, không tự thay đổi ngưỡng bắt buộc.",
+                          "Thu hẹp":  "Chưa chạm điều kiện Dừng, ba ngưỡng an toàn đều đạt; có lỗi chất lượng hoặc kinh doanh/vận hành khoanh được theo kho, loại thao tác hoặc nhóm ticket. Ghi rõ phần bỏ và phần giữ, người xử lý phần ngoài phạm vi; chỉ coi phạm vi giữ đủ điều kiện khi đo lại đạt toàn bộ required, business_ops và trần vận hành trên nền/thẻ, không regression và độ phủ \u003e 0. Chưa có bằng chứng đo lại thì Cải tiến thêm.",
+                          "Cải tiến thêm":  "Chưa chạm điều kiện Dừng nhưng còn ngưỡng required/business_ops hoặc trần vận hành chưa đạt và chưa có phạm vi thu hẹp đã được đo đạt. Dừng thao tác liên quan nếu có lỗi an toàn; nêu nguyên nhân, người sửa, phép kiểm chứng và hạn tối đa 48 giờ, rà soát ngày 21/11/2026 GMT+7. Không mở pilot trong khi chờ cải tiến.",
+                          "Dừng":  "Ưu tiên trước các quyết định khác khi chạm stop_condition: có từ hai nhóm lỗi an toàn, lỗi an toàn còn tồn tại sau một vòng sửa trong 48 giờ, không còn phạm vi \u003e 0 đạt, hoặc chi phí trên 10.000đ/ticket sau thu hẹp và đo lại. Tắt thao tác ghi liên quan, chuyển xử lý thủ công, bảo toàn audit và đối soát thiệt hại."
+                      }
 }
