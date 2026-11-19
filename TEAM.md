@@ -35,11 +35,11 @@ Mỗi thành viên tự điền đóng góp thực tế, bằng chứng và exit
 
 ### Đóng góp cụ thể
 
-Chuẩn bị đầu vào Lab 9, rà soát và duyệt tiêu chí CP2. Có dùng AI hỗ trợ code, kiểm thử và tài liệu; Tuấn đọc, duyệt tiêu chí và quyết định thực hiện.
+Phụ trách đầu ra kỹ thuật: xây dựng ba nhóm cổng trong `lab10/guards.py`: xác minh chủ đơn/kiện và chính sách hiệu lực; tính lại quyền lợi còn lại từ tracking và ledger, kiểm tra approval và hạn mức; xác minh lỗi hãng và tối thiểu hóa dữ liệu gửi ra ngoài. Chuẩn bị hai ca thử hiểm và bộ kiểm tra hành vi; chốt snapshot vòng 1. Phân tích nguyên nhân và giới hạn cổng trong B7.1–B7.2, C5–C7 và C9. Rà soát, duyệt tiêu chí và ký đại diện nhóm. Có dùng AI hỗ trợ code, kiểm thử và tài liệu.
 
 ### Bằng chứng
 
-Chờ bổ sung mã commit, mã lần chạy và mục phiếu.
+Commit ký `45ef97b`; commit cổng vòng 1 `d3a6a0f`; snapshot `fdb61587`; `docs/cp3-evidence/behavior_checks.py`; Phiếu B B7.1–B7.3; Phiếu C C7/C9. Bộ nền sau sửa đạt 110/110, 13 public tests OK.
 
 ### Exit ticket
 
@@ -55,11 +55,11 @@ Chờ thành viên tự ghi một điều học được và một điều còn 
 
 ### Đóng góp cụ thể
 
-Chờ thành viên tự ghi, kèm phần việc có sử dụng AI.
+Phụ trách đầu ra kiểm thử và đo lường: tổng hợp baseline và trace T-002@55, đối chiếu kết quả trước/sau cổng và theo dõi regression. Với S5, hồ sơ kiểm thử bao gồm đo prepared trước khi sửa, trace các nhánh chi phí B2B, ticket dài và hoàn lặp; đánh giá lại S5 và bộ nền. Phần monitor bổ sung đo chi phí máy/công duyệt theo kho và tiền LLM cao nhất, không đọc nhãn đúng/sai. Quản lý bảng mã lần chạy, report ba mốc và nhật ký tại B0–B2, B7.3, C0–C2 và C8.
 
 ### Bằng chứng
 
-Chờ bổ sung mã commit, mã lần chạy và mục phiếu.
+Đầu ra tại commit `8a4d28f`; `lab10/monitors.py`; grade `R-S5-grade-20261119-165030-65d527`; `docs/cp4-evidence/journal.jsonl`; S5 90/90 trong scope, nền 110/110, regression và monitor đạt. Đây là bằng chứng đầu ra theo vai; nhật ký thao tác cá nhân do thành viên xác nhận thêm.
 
 ### Exit ticket
 
@@ -75,11 +75,11 @@ Chờ thành viên tự ghi một điều học được và một điều còn 
 
 ### Đóng góp cụ thể
 
-Chờ thành viên tự ghi, kèm phần việc có sử dụng AI.
+Phụ trách đầu ra sản phẩm và kinh doanh: tổng hợp mục tiêu, thước đo và tiêu chí trong Phiếu A từ eval card/PRD Lab 9 và dữ liệu vận hành Lab 10; giải thích ngưỡng chất lượng, an toàn, chi phí và ROI. Hoàn thiện bản đồ dữ liệu B3 và cấu hình business: cap hoàn 1.800.000đ/ngày, budget LLM 1.200đ, ROI tối thiểu 0,25. Phân tích chi phí theo kho để đưa B2B về manual, giữ 60% phạm vi S5. Tổng hợp v1/v2 Dừng theo điều kiện đã ký; tách chi phí phần giữ và chi phí manual, không gán ROI phần giữ cho toàn bộ luồng.
 
 ### Bằng chứng
 
-Chờ bổ sung mã commit, mã lần chạy và mục phiếu.
+Phiếu A A1–A4; Phiếu B B3/B7.4/B8; Phiếu C C3/C8/C12; `config/operating_gates.json` mục business; commit bộ bài `fad298c`. Report S5: 3.980đ/ticket, ROI 1,51 cho 18 ca/ngày trong scope; 12 ca/ngày ngoài scope. Tiêu chí được Tuấn ký tại `45ef97b`.
 
 ### Exit ticket
 
@@ -95,11 +95,11 @@ Chờ thành viên tự ghi một điều học được và một điều còn 
 
 ### Đóng góp cụ thể
 
-Chờ thành viên tự ghi, kèm phần việc có sử dụng AI.
+Phụ trách đầu ra vận hành và pháp lý: lập HAZOP, checklist 9 nhóm và risk register; xác định PIC NV-TUNG, người duyệt NV-HANH, đầu mối đối soát NV-OANH. Hoàn thiện cấu hình operations/legal và runbook: 1 người duyệt, 6 ca/giờ, SLA 60 phút, kiểm mẫu 10%, điều kiện dừng và bàn giao manual. Phân tích ảnh hưởng của B2B ngoài scope, PII và các bên thứ ba; cập nhật fault tree/runbook sau S5. Hoàn thiện thông tin thành viên, thẻ, quyết định và ba dòng bắt buộc trong submission.json; bộ bài đã được gom và kiểm đủ thành phần.
 
 ### Bằng chứng
 
-Chờ bổ sung mã commit, mã lần chạy và mục phiếu.
+Phiếu B B4–B5/B7.5–B7.6; Phiếu C C4/C10–C11; `config/operating_gates.json` mục operations/legal; `submission/submission.json` và `submission/manifest.json`; commit `fad298c`. Lệnh `lab10.check_submission` xác nhận ĐỦ THÀNH PHẦN; chưa ghi nhận nộp LMS hay diễn tập production.
 
 ### Exit ticket
 
