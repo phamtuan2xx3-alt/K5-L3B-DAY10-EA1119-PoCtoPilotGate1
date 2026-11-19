@@ -6,20 +6,19 @@
 - Lớp: `L3B`
 - Repo của bàn: `K5-L3B-DAY10-EA1119-PoCtoPilotGate1`
 - Link repo: [https://github.com/phamtuan2xx3-alt/K5-L3B-DAY10-EA1119-PoCtoPilotGate1](https://github.com/phamtuan2xx3-alt/K5-L3B-DAY10-EA1119-PoCtoPilotGate1)
-- Thẻ sự cố đã bốc (S1–S8): Chưa cập nhật
+- Thẻ sự cố đã bốc (S1–S8): S5
 
 ## Thành viên
 
 
-| STT | Họ và tên                         | MSSV        | Vai                               | Trưởng nhóm |
-| ---: | --------------------------------- | ----------- | --------------------------------- | :-----------: |
-| 1   | Phạm Quang Tuấn                   | 2A202603824 | Kỹ sư cổng — viết cổng kiểm soát  | Có          |
-| 2   | Nhật (cần bổ sung họ tên đầy đủ)  | Chờ bổ sung | Kỹ sư cổng — kiểm thử và đo lường |             |
-| 3   | Công (cần bổ sung họ tên đầy đủ)  | Chờ bổ sung | Sản phẩm và kinh doanh            |             |
-| 4   | Quyến (cần bổ sung họ tên đầy đủ) | Chờ bổ sung | Vận hành và pháp lý               |             |
+| STT | Họ và tên | MSSV | GitHub | Vai | Trưởng nhóm |
+| ---: | --- | --- | --- | --- | :---: |
+| 1 | Phạm Quang Tuấn | 2A202603824 | phamtuan2xx3-alt | Kỹ sư cổng — viết cổng kiểm soát | Có |
+| 2 | Chu Văn Nhật | 2A202603848 | moyymochi11 | Kỹ sư cổng — kiểm thử và đo lường | |
+| 3 | Nguyễn Thành Công | 2A202603789 | congnt180263 | Sản phẩm và kinh doanh | |
+| 4 | Đồng Văn Quyến | 2A202603769 | dvq2609 | Vận hành và pháp lý | |
 
-
-Trước khi nộp, bổ sung họ tên đầy đủ và MSSV còn thiếu; đổi tiêu đề cá nhân thành `HoVaTen-MSSV`. Ghi `members` trong `submission/submission.json` khớp bảng trên.
+Thông tin thành viên đã được đối chiếu theo danh sách nhóm cung cấp ngày 19/11/2026. Mỗi người tự hoàn thiện đóng góp, bằng chứng và exit ticket. Ghi `members` trong `submission/submission.json` khớp bảng trên.
 
 ## Cá nhân
 
@@ -32,7 +31,7 @@ Mỗi thành viên tự điền đóng góp thực tế, bằng chứng và exit
 - Đọc luồng agent, helper và tool; viết 2–3 cổng phòng ngừa trong `lab10/guards.py` (`pre_guard`, `write_gate`).
 - Vòng 1: Phiếu B B7.1–B7.2.
 - Vòng 2: sửa cổng theo nguyên nhân sự cố; Phiếu C C7; đóng góp C5–C6 và C9.
-- Phối hợp Nhật kiểm thử, Công xác định ngưỡng kinh doanh, Quyếnxác định yêu cầu vận hành và pháp lý.
+- Phối hợp Nhật kiểm thử, Công xác định ngưỡng kinh doanh, Quyến xác định yêu cầu vận hành và pháp lý.
 
 ### Đóng góp cụ thể
 
@@ -46,7 +45,7 @@ Chờ bổ sung mã commit, mã lần chạy và mục phiếu.
 
 Chờ thành viên tự ghi một điều học được và một điều còn chưa chắc.
 
-## Nhat — chờ họ tên đầy đủ và MSSV
+## ChuVanNhat-2A202603848
 
 ### Phần việc phụ trách
 
@@ -66,7 +65,7 @@ Chờ bổ sung mã commit, mã lần chạy và mục phiếu.
 
 Chờ thành viên tự ghi một điều học được và một điều còn chưa chắc.
 
-## Cong — chờ họ tên đầy đủ và MSSV
+## NguyenThanhCong-2A202603789
 
 ### Phần việc phụ trách
 
@@ -86,7 +85,7 @@ Chờ bổ sung mã commit, mã lần chạy và mục phiếu.
 
 Chờ thành viên tự ghi một điều học được và một điều còn chưa chắc.
 
-## Quyen — chờ họ tên đầy đủ và MSSV
+## DongVanQuyen-2A202603769
 
 ### Phần việc phụ trách
 
@@ -127,7 +126,7 @@ Chờ thành viên tự ghi một điều học được và một điều còn 
 
 - Công tổng hợp tiêu chí; cả team chịu trách nhiệm về ngưỡng và quy tắc quyết định. Ký, commit, push trước lần eval đầu tiên; sau khi ký giữ nguyên file tiêu chí.
 - Nhật đo baseline và gửi mã run, trace lỗi, dữ liệu đối chiếu cho Tuấn trước khi Tuấn sửa cổng vòng 1.
-- Tuấn viết 2–3 cổng dựa trên bằng chứng và pre-mortem/HAZOP; Công cung cấp ngưỡng kinh doanh, Quyếncung cấp yêu cầu vận hành/pháp lý.
+- Tuấn viết 2–3 cổng dựa trên bằng chứng và pre-mortem/HAZOP; Công cung cấp ngưỡng kinh doanh, Quyến cung cấp yêu cầu vận hành/pháp lý.
 - Nhật kiểm thử sau mỗi lần sửa; khi chốt vòng 1, tạo checkpoint và report prepared, giữ nguyên bản chụp vòng 1.
 - Khi nhận thẻ, Nhật đo trước khi sửa; cả team phân tích, Tuấn sửa cổng, Nhật thêm monitor và kiểm tra lại bộ nền lẫn bộ thẻ.
 - Cả team cùng làm B6, C3 theo thẻ, C5–C6 và C9. Công ghi quyết định v1/v2 dưới tên “Quyết định chung của team”, gắn với tiêu chí đã ký và mã report thực tế.
