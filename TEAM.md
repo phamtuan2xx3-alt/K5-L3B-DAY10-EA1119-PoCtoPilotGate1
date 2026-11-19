@@ -144,7 +144,7 @@ Chờ thành viên tự ghi một điều học được và một điều còn 
 | CP5 | Quyết định v2 khớp bằng chứng; bài đủ thành phần; đã push; từng người nộp LMS                           |
 
 
-Các ngưỡng cụ thể, quyết định v1/v2 và trạng thái đạt checkpoint chỉ được ghi là đã chốt/đã đạt khi có dữ liệu và bằng chứng tương ứng. Hiện chưa xác nhận các mốc này đã hoàn thành.
+Team đã hoàn thiện các đầu ra kỹ thuật và hồ sơ CP1–CP5, kiểm thử công khai và gom bài có bằng chứng. Demo, xác nhận đóng góp/exit ticket và LMS do từng thành viên hoàn tất riêng; test ẩn chưa chạy.
 
 ## Tài liệu và bàn giao
 
@@ -165,3 +165,15 @@ Cấu hình chỉ áp dụng cho repo này; mỗi thành viên vẫn tự ghi đ
 ## Bàn giao sau CP3
 
 Đã hoàn thành hồ sơ vòng1: Phiếu B B0–B8, guards/config, test và report prepared; snapshot `fdb61587`. Kết quả bộ nền110/110, không lỗi an toàn, không regression; v1 Dừng theo trigger baseline trong tiêu chí đã ký. CP4 chờ Coach cấp đúng thẻ trước khi đo/sửa. Xem [bằng chứng CP3](docs/cp3-evidence/README.md) và [bàn giao CP4](docs/team-handoff.md). Mục cá nhân của từng thành viên và thông tin còn thiếu do chính thành viên bổ sung.
+## Kết quả kiểm tra chung và bàn giao theo vai
+
+Team đã kiểm tra:13 public tests OK; S5 PASS-VISIBLE; required/business_ops và regression đạt; bộ bài ĐỦ THÀNH PHẦN. V1/v2 Dừng theo tiêu chí ký; không đồng nghĩa triển khai production. Các đầu ra được bàn giao theo vai dưới đây, không thay thế xác nhận thao tác cá nhân.
+
+| Thành viên | Đầu ra đã hoàn thiện trong bộ bài chung | Bằng chứng |
+| --- | --- | --- |
+| Phạm Quang Tuấn | Ba nhóm guard, behavioral checks, snapshot vòng1 | d3a6a0f; docs/cp3-evidence; guards_round1 fdb61587 |
+| Chu Văn Nhật | Report ba mốc, regression, monitor chi phí | 8a4d28f; grade R-S5-grade-20261119-165030-65d527; C8 |
+| Nguyễn Thành Công | Phiếu A, business scope, phân tích chi phí và v1/v2 | 45ef97b; Phiếu B B8, Phiếu C C12; fad298c |
+| Đồng Văn Quyến | HAZOP, risk register, runbook, bộ submission đã gom | C4/C10/C11; submission/manifest.json; fad298c |
+
+[Hướng dẫn mỗi thành viên chạy/test và giải thích phần phụ trách](docs/huong-dan-theo-thanh-vien.md). Từng người bổ sung đóng góp thực tế và exit ticket sau khi tự kiểm chứng.

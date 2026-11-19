@@ -2,7 +2,7 @@
 
 **Bàn:** EA1119 — L3B · **Thẻ đã bốc:** S5
 
-Tuấn: cổng; Nhật: đo/monitor; Công: kinh doanh; Đồng Văn Quyến: vận hành/pháp lý. Hồ sơ chung của team. C12 dành cho CP5, chưa chốt tại CP4.
+Tuấn: cổng; Nhật: đo/monitor; Công: kinh doanh; Đồng Văn Quyến: vận hành/pháp lý. Hồ sơ chung của team. C12 đã chốt tại CP5; bộ bài chung đã kiểm tra và gom đủ thành phần.
 
 ## C0 · Nhật ký lần chạy vòng 2
 
@@ -162,7 +162,7 @@ Scope ngăn gọi agent cho B2B theo warehouse gốc; budget giới hạn chi ph
 | 6 chi phí | Xong phần giữ:3.980đ,ROI1.51; manual ngoài scope cần đo | Nguyễn Thành Công |
 | 7 vận hành | Cập nhật bàn giao B2B; kênh/kill switch chưa diễn tập thật | Đồng Văn Quyến |
 | 8 con người/pháp lý | Hạnh/Oanh nhận xử lý và đối soát theo runbook; chưa xác nhận bên ngoài | Đồng Văn Quyến |
-| 9 quyết định | CP4 đạt kỹ thuật; C12/v2 chờ CP5, v1 giữ nguyên | Nguyễn Thành Công |
+| 9 quyết định | CP4 đạt kỹ thuật; C12/v2 Dừng đã chốt tại CP5, v1 giữ nguyên | Nguyễn Thành Công |
 
 ### Runbook4 · Sau sự cố
 
