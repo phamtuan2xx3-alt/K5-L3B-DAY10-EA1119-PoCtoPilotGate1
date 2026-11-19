@@ -12,7 +12,7 @@
 
 | STT | Họ và tên | MSSV | Vai | Trưởng nhóm |
 | --: | --------- | ---- | --- | :---------: |
-| 1 | Tuấn Phạm Quang | Chờ bổ sung | Kỹ sư cổng — viết cổng kiểm soát | Chờ xác nhận |
+| 1 | Phạm Quang Tuấn | 2A202603824 | Kỹ sư cổng — viết cổng kiểm soát | Chờ xác nhận |
 | 2 | Nhật (cần bổ sung họ tên đầy đủ) | Chờ bổ sung | Kỹ sư cổng — kiểm thử và đo lường | |
 | 3 | Công (cần bổ sung họ tên đầy đủ) | Chờ bổ sung | Sản phẩm và kinh doanh | |
 | 4 | Quyền (cần bổ sung họ tên đầy đủ) | Chờ bổ sung | Vận hành và pháp lý | |
@@ -23,7 +23,7 @@ Trước khi nộp, bổ sung họ tên đầy đủ, MSSV và trưởng nhóm; 
 
 Mỗi thành viên tự điền đóng góp thực tế, bằng chứng và exit ticket. Nếu dùng AI, ghi rõ phần việc đã dùng.
 
-## TuanPhamQuang — chờ MSSV
+## PhamQuangTuan-2A202603824
 
 ### Phần việc phụ trách
 
@@ -139,3 +139,8 @@ Chờ thành viên tự ghi một điều học được và một điều còn 
 | CP5 | Quyết định v2 khớp bằng chứng; bài đủ thành phần; đã push; từng người nộp LMS |
 
 Các ngưỡng cụ thể, quyết định v1/v2 và trạng thái đạt checkpoint chỉ được ghi là đã chốt/đã đạt khi có dữ liệu và bằng chứng tương ứng. Hiện chưa xác nhận các mốc này đã hoàn thành.
+
+## Tài liệu và bàn giao
+
+- [Đầu vào Lab 9 dùng chung](docs/lab9/README.md): eval card và PRD v1.1 của Tuấn.
+- [Việc tiếp theo theo CP](docs/team-handoff.md): trạng thái chuẩn bị và thứ tự bàn giao.
