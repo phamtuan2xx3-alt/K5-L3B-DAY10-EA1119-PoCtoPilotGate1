@@ -1,12 +1,14 @@
 {
-  "team": "",
-  "members": [],
-  "incident": "",
-  "decision_v1": "",
-  "decision_v2": "",
-  "three_lines": {
-    "environment_assumption": "",
-    "reduce_or_prevent": "",
-    "measure_in_pilot": ""
-  }
+    "team":  "K5-L3B-DAY10-EA1119-PoCtoPilotGate1",
+    "members":  [
+
+                ],
+    "incident":  "",
+    "decision_v1":  "Dừng",
+    "decision_v2":  "",
+    "three_lines":  {
+                        "environment_assumption":  "",
+                        "reduce_or_prevent":  "",
+                        "measure_in_pilot":  ""
+                    }
 }

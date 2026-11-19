@@ -1,50 +1,29 @@
-# Bàn giao CP1 → CP2 → CP3 — EA1119
+# Bàn giao CP3 → CP4 — EA1119
 
-## Đã chuẩn bị
+## Trạng thái hiện tại
 
-- Repo chung: `K5-L3B-DAY10-EA1119-PoCtoPilotGate1`; origin trỏ về repo nhóm.
-- Ngày 19/11/2026: chạy `py -3 -m unittest discover -s tests`, kết quả `Ran 13 tests`, `OK`.
-- Windows máy Tuấn dùng `py -3`; lệnh `python` chưa có trong PATH. Các máy khác dùng Python 3 tương ứng.
-- Quyết định chung của team: dùng [eval card](lab9/eval_card.md) và [PRD v1.1](lab9/PRD_v1.1.md) của Tuấn cho CP2; nguồn và hash tại [đây](lab9/README.md).
-- Đã điền tên nhóm trong `config/acceptance_criteria.json`; chưa đặt ngưỡng, chưa ký tiêu chí, chưa chạy CLI eval/grade, chưa sửa guard và chưa tạo checkpoint vòng 1.
-- Đã lấy họ tên Phạm Quang Tuấn và MSSV 2A202603824 từ tên folder/repo Lab 9. Còn thiếu họ tên đầy đủ/MSSV của Nhật, Công, Quyền và xác nhận trưởng nhóm; vì vậy chưa chốt toàn bộ CP1.
+- CP2 đã ký tại commit `45ef97b`; hash tiêu chí `081e817c9c3251ae569f8491cba9d35444a91c62cfec5804a928d96c857d9a6d`. Không sửa file tiêu chí.
+- CP3 đã có baseline, phân tích B1–B6, 3 nhóm cổng, config và runbook B7, behavioral tests, bản chốt prepared và quyết định v1/B8.
+- Bản chốt vòng1: `fdb61587`, tạo19/11/2026 15:46:24 GMT+7. Giữ nguyên `lab10/guards_round1.py`, `config/operating_gates.round1.json`, `config/round1.lock`.
+- Prepared:110/110 trial, pass_rate/pass_k1.0, hoàn sai/lỗi hãng oan/PII0, không regression;4.449đ/ticket, ROI1.25, ùn0, maxwait0 phút, độ phủ1.0.
+- Escalation22,73% vượt chỉ số nên có20%; tổng ca vào hàng duyệt gồm kiểm mẫu27,27%. Không ép giảm chuyển người để đạt hình thức.
+- **v1: Dừng pilot** theo stop_condition đã ký vì baseline chạm2 nhóm lỗi an toàn. Bản sửa nền đã đạt không tự xóa trigger. Chưa có pilot thật đang chạy; CP4 vẫn đánh giá offline.
+- Họ tên đầy đủ/MSSV của Nhật, Công, Quyền và exit ticket từng người vẫn cần bổ sung; không coi các mục cá nhân là đã hoàn thành.
 
-## Công làm tiếp — CP2
+## Team đọc
 
-1. Đọc hai tài liệu Lab 9 và `data/world.json` mục `ops_limits`, `ops_facts`.
-2. Hoàn thiện Phiếu A A1–A4; xác định cách đo, các ngưỡng, hành động khi trượt và ngày xem lại.
-3. Điền `signed_by`, `required`, `nice_to_have`, `business_ops`, `stop_condition`, bốn dòng `decision_rule` trong `config/acceptance_criteria.json`.
-4. Tuấn góp ý rủi ro kỹ thuật; Nhật kiểm tra cách tính metric; Quyền kiểm tra dữ liệu cá nhân, hàng chờ và điều kiện dừng. Ghi kết luận là “Quyết định chung của team”.
-5. Khi đầy đủ và chốt xong, ký rồi commit/push ngay; ghi giờ ký và commit vào A5. Sau ký không sửa file tiêu chí.
+1. `TEAM.md`: vai và danh tính Git. Trưởng nhóm Tuấn, MSSV2A202603824; mỗi máy đặt local user.name=`2A202603824`, user.email=`2A202603824@example.com` theo README.
+2. `templates/form-b-evaluation-gates.md`: toàn bộ kết quả và v1; không ghi đè v1 khi nhận thẻ.
+3. `docs/cp3-evidence/README.md`: report và trace có thể đọc ngay trên GitHub.
 
-```powershell
-py -3 -m lab10.criteria sign
-# Chỉ tiếp tục khi lệnh ký thành công. Trên PowerShell, chạy từng dòng Git máy in ra.
-git add config/acceptance_criteria.json config/acceptance_criteria.lock
-git commit -m "Sign acceptance criteria"
-git push origin main
-```
+## Chờ Coach phát thẻ — đầu CP4
 
-## Nhật làm tiếp — đầu CP3, sau khi CP2 hoàn tất
+- Chỉ nhận đúng số S1–S8 Coach cấp; chưa có số thì không lấy ngẫu nhiên và không xem thẻ bàn khác.
+- Một người nhận thẻ bằng ba lệnh README, ghi số vào đầu Phiếu C và TEAM.md, rồi commit/push để team pull.
+- **Nhật:** chạy `py -3 -X utf8 -m lab10.grade --incident Sx` trước khi ai sửa code/config. Ghi mã prepared và kết quả vào C0–C1; trace ít nhất hai ticket hỏng khác kiểu. Giữ mọi report/journal.
+- **Cả team:** làm C2–C6 theo bằng chứng; Công đọc tiền/ROI/phạm vi, Quyền đọc người duyệt/dữ liệu/bên thứ ba. C3 chỉ phần của thẻ.
+- **Tuấn:** sau khi đã đo và phân tích, sửa tiếp `lab10/guards.py`, ghi C7; không sửa snapshot.
+- **Nhật:** thêm ít nhất1 monitor mới trong `lab10/monitors.py`; escalation_rate có sẵn không tính. Đo thẻ và bộ nền sau sửa, kiểm regression; C8.
+- **Quyền:** cập nhật risk register C10, checklist/runbook C11; cả nhóm cập nhật fault tree C9. Công tổng hợp v2/C12 theo cùng tiêu chí đã ký.
 
-```powershell
-py -3 -m lab10.eval --suite base --stage base --note "baseline"
-# Thay RUN_ID bằng mã lệnh trên in ra trước khi chạy:
-py -3 -m lab10.gate --run runs/RUN_ID/report.json
-py -3 -m lab10.trace --suite base --ticket T-002 --seed 55
-```
-
-Bàn giao Tuấn: mã run, chỉ số trượt, ticket@seed, sự kiện/tool và tham số sai, dữ liệu đúng để đối chiếu; chuẩn bị hai tình huống thử hiểm cùng kết quả mong đợi. Điền B0–B2 và B7.3 theo bằng chứng thực tế.
-
-## Tuấn và Quyền làm tiếp — CP3
-
-- Trong lúc Nhật đo: Công làm B3; Quyền làm B4–B5. Cả team làm pre-mortem B6.
-- Sau baseline và phân tích rủi ro: Tuấn mới sửa `guards.py`, viết 2–3 cổng và B7.1–B7.2.
-- Công điền `business`; Quyền điền `operations`, `legal`, checklist và runbook. Tuấn nhận các ngưỡng và quy định này để viết cổng.
-- Nhật kiểm thử cổng, hai ca thử hiểm và regression; khi ổn mới chạy checkpoint, eval prepared và gate, rồi cả team chốt v1/B8 và push.
-
-Không tạo lock/checkpoint trước khi hoàn thiện đầu vào. Không ghi mã run, kết quả đạt hoặc quyết định v1/v2 khi chưa có bằng chứng.
-
-## CP2 đã ký — cập nhật sau cùng
-
-Tuấn đã đọc và duyệt tiêu chí; ký lúc 2026-11-19T15:12:44 (GMT+7). Commit ký: `45ef97b`, đã push lên origin/main và verify trả về ok. Các chỉ dẫn chờ ký ở trên là lịch sử chuẩn bị; không chạy sign lại. Nhật có thể bắt đầu CP3 sau khi pull bản mới; chưa có lần eval CLI nào được thực hiện.
+Bài chưa phải submission cuối: chưa thẻ, monitor mới, Phiếu C, v2 hay collect. Chỉ chạy collect ở CP5 sau khi đủ đầu vào; mỗi người tự nộp link LMS.

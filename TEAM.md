@@ -12,12 +12,12 @@
 
 | STT | Họ và tên | MSSV | Vai | Trưởng nhóm |
 | --: | --------- | ---- | --- | :---------: |
-| 1 | Phạm Quang Tuấn | 2A202603824 | Kỹ sư cổng — viết cổng kiểm soát | Chờ xác nhận |
+| 1 | Phạm Quang Tuấn | 2A202603824 | Kỹ sư cổng — viết cổng kiểm soát | Có |
 | 2 | Nhật (cần bổ sung họ tên đầy đủ) | Chờ bổ sung | Kỹ sư cổng — kiểm thử và đo lường | |
 | 3 | Công (cần bổ sung họ tên đầy đủ) | Chờ bổ sung | Sản phẩm và kinh doanh | |
 | 4 | Quyền (cần bổ sung họ tên đầy đủ) | Chờ bổ sung | Vận hành và pháp lý | |
 
-Trước khi nộp, bổ sung họ tên đầy đủ, MSSV và trưởng nhóm; đổi tiêu đề cá nhân thành `HoVaTen-MSSV`. Ghi `members` trong `submission/submission.json` khớp bảng trên.
+Trước khi nộp, bổ sung họ tên đầy đủ và MSSV còn thiếu; đổi tiêu đề cá nhân thành `HoVaTen-MSSV`. Ghi `members` trong `submission/submission.json` khớp bảng trên.
 
 ## Cá nhân
 
@@ -34,7 +34,7 @@ Mỗi thành viên tự điền đóng góp thực tế, bằng chứng và exit
 
 ### Đóng góp cụ thể
 
-Chuẩn bị đầu vào Lab 9, rà soát và duyệt tiêu chí CP2. Có dùng AI hỗ trợ soạn tài liệu và kiểm tra cấu hình.
+Chuẩn bị đầu vào Lab 9, rà soát và duyệt tiêu chí CP2. Có dùng AI hỗ trợ code, kiểm thử và tài liệu; Tuấn đọc, duyệt tiêu chí và quyết định thực hiện.
 
 ### Bằng chứng
 
@@ -144,3 +144,18 @@ Các ngưỡng cụ thể, quyết định v1/v2 và trạng thái đạt checkp
 
 - [Đầu vào Lab 9 dùng chung](docs/lab9/README.md): eval card và PRD v1.1 của Tuấn.
 - [Việc tiếp theo theo CP](docs/team-handoff.md): trạng thái chuẩn bị và thứ tự bàn giao.
+
+## Danh tính Git của repo nhóm
+
+Trưởng nhóm: Phạm Quang Tuấn, MSSV `2A202603824`. Mỗi máy làm repo nhóm đặt cấu hình local theo README (không dùng email cá nhân):
+
+```powershell
+git config --local user.name 2A202603824
+git config --local user.email 2A202603824@example.com
+```
+
+Cấu hình chỉ áp dụng cho repo này; mỗi thành viên vẫn tự ghi đóng góp trong mục cá nhân và tự nộp LMS.
+
+## Bàn giao sau CP3
+
+Đã hoàn thành hồ sơ vòng1: Phiếu B B0–B8, guards/config, test và report prepared; snapshot `fdb61587`. Kết quả bộ nền110/110, không lỗi an toàn, không regression; v1 Dừng theo trigger baseline trong tiêu chí đã ký. CP4 chờ Coach cấp đúng thẻ trước khi đo/sửa. Xem [bằng chứng CP3](docs/cp3-evidence/README.md) và [bàn giao CP4](docs/team-handoff.md). Mục cá nhân của từng thành viên và thông tin còn thiếu do chính thành viên bổ sung.
