@@ -20,15 +20,15 @@ Lab hỏi cả code đã đúng chưa, tốn bao nhiêu tiền, cần mấy ngư
 
 **Bàn làm việc ở đúng các chỗ sau** (các file khác bị khoá bằng hash, sửa là bị phát hiện):
 
-| Chỗ | Ai | Làm gì |
-|---|---|---|
-| `templates/form-a-criteria.md`, `form-b-evaluation-gates.md`, `form-c-incident.md` | cả bàn | Điền ba phiếu; mỗi câu của đề có ô mang đúng số câu |
-| `config/acceptance_criteria.json` | Sản phẩm và kinh doanh | Điền ngưỡng, ký **một lần**, rồi giữ nguyên |
-| `lab10/guards.py` (hàm `pre_guard`, `write_gate`) | Kỹ sư cổng | Viết cổng ở vòng 1, sửa tiếp ở vòng 2 |
-| `config/operating_gates.json` (mục `business`, `operations`, `legal`) | Sản phẩm và kinh doanh · Vận hành và pháp lý | Điền con số và tên người, không cần code |
-| `lab10/monitors.py` (dict `MONITORS`) | Kỹ sư cổng | Thêm ít nhất một chỉ số theo dõi ở vòng 2 |
-| `submission/submission.json` | Vận hành và pháp lý | Điền để gom bài cuối buổi |
-| `TEAM.md` | trưởng nhóm · từng thành viên | Bảng họ tên, MSSV, vai; mỗi người một mục cá nhân |
+| Chỗ                                                                                     | Ai                                                    | Làm gì                                                          |
+| ---------------------------------------------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------- |
+| `templates/form-a-criteria.md`, `form-b-evaluation-gates.md`, `form-c-incident.md` | cả bàn                                              | Điền ba phiếu; mỗi câu của đề có ô mang đúng số câu |
+| `config/acceptance_criteria.json`                                                      | Sản phẩm và kinh doanh                             | Điền ngưỡng, ký **một lần**, rồi giữ nguyên       |
+| `lab10/guards.py` (hàm `pre_guard`, `write_gate`)                                 | Kỹ sư cổng                                         | Viết cổng ở vòng 1, sửa tiếp ở vòng 2                     |
+| `config/operating_gates.json` (mục `business`, `operations`, `legal`)           | Sản phẩm và kinh doanh · Vận hành và pháp lý | Điền con số và tên người, không cần code                 |
+| `lab10/monitors.py` (dict `MONITORS`)                                                | Kỹ sư cổng                                         | Thêm ít nhất một chỉ số theo dõi ở vòng 2                |
+| `submission/submission.json`                                                           | Vận hành và pháp lý                              | Điền để gom bài cuối buổi                                  |
+| `TEAM.md`                                                                              | trưởng nhóm · từng thành viên                  | Bảng họ tên, MSSV, vai; mỗi người một mục cá nhân       |
 
 ## 2. Cài đặt (dưới 5 phút)
 
@@ -134,17 +134,15 @@ python3 -m lab10.trace --suite base --ticket T-002 --seed 55
               return Verdict.escalate("vượt trần hoàn trong ngày, chuyển người duyệt")
       return Verdict.allow()
   ```
-
 - Kỹ sư cổng · **câu 2.7** (B7.2): hai bước tránh rò rỉ dữ liệu. **Câu 2.8** (B7.3): một tính chất + hai ticket hiểm chạy bằng `--adhoc`.
 - Sản phẩm và kinh doanh · **câu 2.9** (B7.4): điền `config/operating_gates.json` mục `business` (`daily_refund_cap_vnd`, `cost_budget_per_ticket_vnd`, `pilot_scope`, `roi_min`), mỗi số một câu lý do từ `data/world.json` → `ops_limits`, `ops_facts`.
 - Vận hành và pháp lý · **câu 2.10** (B7.5, B7.6): điền mục `operations` (`pic`, `approver_id`, `reviewers_on_shift`, `review_capacity_per_hour`, `max_queue_wait_minutes`, `stop_conditions`, `alert_channel`) và `legal` (`pii_fields_blocked_to_third_party`, `carrier_fault_requires_recorded_cause`); viết runbook phần 1–3 và mục **Giờ cao điểm** khớp các con số đó. Nghĩa từng khoá: [guide, Cổng trong config](docs/guide.md#ban-do).
 
-  | Khoá | Trước | Sau, ví dụ kiểu dữ liệu (chọn số và mã của bàn từ dữ liệu) |
-  |---|---|---|
-  | `business.daily_refund_cap_vnd` | `null` | `1500000` |
-  | `operations.pic` | `""` | `"NV-TUNG"` |
-  | `operations.stop_conditions` | `[]` | `["Khi có 1 lỗi ghi oan cho hãng thì tắt file_carrier_fault"]` |
-
+  | Khoá                             | Trước  | Sau, ví dụ kiểu dữ liệu (chọn số và mã của bàn từ dữ liệu) |
+  | --------------------------------- | -------- | ------------------------------------------------------------------------ |
+  | `business.daily_refund_cap_vnd` | `null` | `1500000`                                                              |
+  | `operations.pic`                | `""`   | `"NV-TUNG"`                                                            |
+  | `operations.stop_conditions`    | `[]`   | `["Khi có 1 lỗi ghi oan cho hãng thì tắt file_carrier_fault"]`    |
 - **Lệnh thử cổng:**
 
 ```bash
@@ -224,15 +222,15 @@ python3 -m lab10.grade --incident Sx
 
 ## 4. Bảy lệnh
 
-| # | Lệnh | Dùng khi |
-|---|---|---|
-| 1 | `python3 -m lab10.criteria sign` | Ký tiêu chí, một lần, phút 60–65 |
-| 2 | `python3 -m lab10.eval --suite <base\|Sx> --stage <base\|prepared\|after> --note "..."` | Chạy trợ lý trên một bộ ticket, in số và mã lần chạy |
-| 3 | `python3 -m lab10.trace --suite <base\|Sx> --ticket <ID> --seed <11\|22\|33\|44\|55> [--stage after]` hoặc `--adhoc "..." --order O-.... --customer C-..` | Xem từng bước trợ lý làm với một ticket |
-| 4 | `python3 -m lab10.gate --run runs/<mã lần chạy>/report.json` | So một lần chạy với tiêu chí đã ký |
-| 5 | `python3 -m lab10.checkpoint` | Chốt cổng vòng 1, một lần, phút 105–115 |
-| 6 | `python3 -m lab10.grade --incident Sx` | Tự kiểm tra trên thẻ sự cố ở ba mốc (từ phút 125) |
-| 7 | `python3 -m lab10.check_submission --collect` | Gom bài nộp và kiểm đủ thành phần |
+| # | Lệnh                                                                                                                                                     | Dùng khi                                                       |
+| - | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| 1 | `python3 -m lab10.criteria sign`                                                                                                                        | Ký tiêu chí, một lần, phút 60–65                         |
+| 2 | `python3 -m lab10.eval --suite <base\|Sx> --stage <base\|prepared\|after> --note "..."`                                                                    | Chạy trợ lý trên một bộ ticket, in số và mã lần chạy |
+| 3 | `python3 -m lab10.trace --suite <base\|Sx> --ticket <ID> --seed <11\|22\|33\|44\|55> [--stage after]` hoặc `--adhoc "..." --order O-.... --customer C-..` | Xem từng bước trợ lý làm với một ticket                 |
+| 4 | `python3 -m lab10.gate --run runs/<mã lần chạy>/report.json`                                                                                         | So một lần chạy với tiêu chí đã ký                     |
+| 5 | `python3 -m lab10.checkpoint`                                                                                                                           | Chốt cổng vòng 1, một lần, phút 105–115                  |
+| 6 | `python3 -m lab10.grade --incident Sx`                                                                                                                  | Tự kiểm tra trên thẻ sự cố ở ba mốc (từ phút 125)     |
+| 7 | `python3 -m lab10.check_submission --collect`                                                                                                           | Gom bài nộp và kiểm đủ thành phần                       |
 
 Output mẫu và cách đọc từng dòng: [guide, Phụ lục A–B và các mẫu kết quả](docs/guide.md#phu-luc-a). Chỉ số `pass_k` ở đây là **pass^k**: tỉ lệ ticket đúng ở **cả 5/5 lần chạy** (khắt khe hơn `pass_rate`; khác `pass@k`, vốn chỉ cần đúng ít nhất một lần).
 
@@ -248,14 +246,14 @@ Output mẫu và cách đọc từng dòng: [guide, Phụ lục A–B và các m
 
 ## 6. Nộp gì và khi nào
 
-| Khi nào | Làm gì |
-|---|---|
-| Phút 60–65 | Ký, commit, push tiêu chí (Timeline, Khối 1) |
-| Phút 105–115 | Chốt vòng 1, điền v1, commit và push (cuối Phiếu B mục B8) |
-| Phút 125–135 | Ghi số thẻ vào dòng `Thẻ đã bốc:` ở đầu Phiếu C |
-| Phút 185–200 | Điền v2 và ba dòng bắt buộc; điền `submission/submission.json`; lệnh 7 tới khi `ĐỦ THÀNH PHẦN` |
-| Sau demo, trước phút 240 | Chạy lại lệnh 6 và lệnh 7 nếu demo có đổi số; đẩy bài; gửi link repo |
-| Trước deadline (GMT+7) | **Mỗi thành viên** nộp link repo trên LMS; viết mục cá nhân trong `TEAM.md` |
+| Khi nào                    | Làm gì                                                                                                         |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Phút 60–65                | Ký, commit, push tiêu chí (Timeline, Khối 1)                                                                 |
+| Phút 105–115              | Chốt vòng 1, điền v1, commit và push (cuối Phiếu B mục B8)                                               |
+| Phút 125–135              | Ghi số thẻ vào dòng `Thẻ đã bốc:` ở đầu Phiếu C                                                    |
+| Phút 185–200              | Điền v2 và ba dòng bắt buộc; điền `submission/submission.json`; lệnh 7 tới khi `ĐỦ THÀNH PHẦN` |
+| Sau demo, trước phút 240 | Chạy lại lệnh 6 và lệnh 7 nếu demo có đổi số; đẩy bài; gửi link repo                               |
+| Trước deadline (GMT+7)    | **Mỗi thành viên** nộp link repo trên LMS; viết mục cá nhân trong `TEAM.md`                     |
 
 Bài nộp là thư mục `submission/` (lệnh 7 gom: code và config hai vòng, tiêu chí đã ký kèm hash, report ba mốc, nhật ký mọi lần chạy, ba phiếu A, B, C) cùng [`TEAM.md`](TEAM.md). Chi tiết: [`submission/README.md`](submission/README.md).
 

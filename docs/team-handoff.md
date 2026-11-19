@@ -8,7 +8,7 @@
 - Prepared:110/110 trial, pass_rate/pass_k1.0, hoàn sai/lỗi hãng oan/PII0, không regression;4.449đ/ticket, ROI1.25, ùn0, maxwait0 phút, độ phủ1.0.
 - Escalation22,73% vượt chỉ số nên có20%; tổng ca vào hàng duyệt gồm kiểm mẫu27,27%. Không ép giảm chuyển người để đạt hình thức.
 - **v1: Dừng pilot** theo stop_condition đã ký vì baseline chạm2 nhóm lỗi an toàn. Bản sửa nền đã đạt không tự xóa trigger. Chưa có pilot thật đang chạy; CP4 vẫn đánh giá offline.
-- Họ tên đầy đủ/MSSV của Nhật, Công, Quyền và exit ticket từng người vẫn cần bổ sung; không coi các mục cá nhân là đã hoàn thành.
+- Họ tên đầy đủ/MSSV của Nhật, Công, Quyến và exit ticket từng người vẫn cần bổ sung; không coi các mục cá nhân là đã hoàn thành.
 
 ## Team đọc
 
@@ -21,9 +21,9 @@
 - Chỉ nhận đúng số S1–S8 Coach cấp; chưa có số thì không lấy ngẫu nhiên và không xem thẻ bàn khác.
 - Một người nhận thẻ bằng ba lệnh README, ghi số vào đầu Phiếu C và TEAM.md, rồi commit/push để team pull.
 - **Nhật:** chạy `py -3 -X utf8 -m lab10.grade --incident Sx` trước khi ai sửa code/config. Ghi mã prepared và kết quả vào C0–C1; trace ít nhất hai ticket hỏng khác kiểu. Giữ mọi report/journal.
-- **Cả team:** làm C2–C6 theo bằng chứng; Công đọc tiền/ROI/phạm vi, Quyền đọc người duyệt/dữ liệu/bên thứ ba. C3 chỉ phần của thẻ.
+- **Cả team:** làm C2–C6 theo bằng chứng; Công đọc tiền/ROI/phạm vi, Quyến đọc người duyệt/dữ liệu/bên thứ ba. C3 chỉ phần của thẻ.
 - **Tuấn:** sau khi đã đo và phân tích, sửa tiếp `lab10/guards.py`, ghi C7; không sửa snapshot.
 - **Nhật:** thêm ít nhất1 monitor mới trong `lab10/monitors.py`; escalation_rate có sẵn không tính. Đo thẻ và bộ nền sau sửa, kiểm regression; C8.
-- **Quyền:** cập nhật risk register C10, checklist/runbook C11; cả nhóm cập nhật fault tree C9. Công tổng hợp v2/C12 theo cùng tiêu chí đã ký.
+- **Quyến:** cập nhật risk register C10, checklist/runbook C11; cả nhóm cập nhật fault tree C9. Công tổng hợp v2/C12 theo cùng tiêu chí đã ký.
 
 Bài chưa phải submission cuối: chưa thẻ, monitor mới, Phiếu C, v2 hay collect. Chỉ chạy collect ở CP5 sau khi đủ đầu vào; mỗi người tự nộp link LMS.
