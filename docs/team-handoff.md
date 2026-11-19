@@ -44,3 +44,7 @@ Bàn giao Tuấn: mã run, chỉ số trượt, ticket@seed, sự kiện/tool v�
 - Nhật kiểm thử cổng, hai ca thử hiểm và regression; khi ổn mới chạy checkpoint, eval prepared và gate, rồi cả team chốt v1/B8 và push.
 
 Không tạo lock/checkpoint trước khi hoàn thiện đầu vào. Không ghi mã run, kết quả đạt hoặc quyết định v1/v2 khi chưa có bằng chứng.
+
+## CP2 đã ký — cập nhật sau cùng
+
+Tuấn đã đọc và duyệt tiêu chí; ký lúc 2026-11-19T15:12:44 (GMT+7). Commit ký: `45ef97b`, đã push lên origin/main và verify trả về ok. Các chỉ dẫn chờ ký ở trên là lịch sử chuẩn bị; không chạy sign lại. Nhật có thể bắt đầu CP3 sau khi pull bản mới; chưa có lần eval CLI nào được thực hiện.

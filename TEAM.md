@@ -34,7 +34,7 @@ Mỗi thành viên tự điền đóng góp thực tế, bằng chứng và exit
 
 ### Đóng góp cụ thể
 
-Chờ thành viên tự ghi, kèm phần việc có sử dụng AI.
+Chuẩn bị đầu vào Lab 9, rà soát và duyệt tiêu chí CP2. Có dùng AI hỗ trợ soạn tài liệu và kiểm tra cấu hình.
 
 ### Bằng chứng
 

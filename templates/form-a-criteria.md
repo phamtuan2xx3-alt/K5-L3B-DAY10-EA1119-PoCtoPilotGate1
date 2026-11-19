@@ -2,9 +2,9 @@
 
 **Bàn:** EA1119 — L3B · **Người tổng hợp:** Công (Sản phẩm và kinh doanh).
 
-**Quyết định chung của team:** chọn bộ [eval card Lab 9](../docs/lab9/eval_card.md) và [PRD v1.1](../docs/lab9/PRD_v1.1.md) của Tuấn làm đầu vào. Tuấn phụ trách rủi ro kỹ thuật, Nhật cách đo, Quyền vận hành và pháp lý. Bản dưới được chuẩn bị theo ủy quyền của Tuấn; đang chờ Tuấn duyệt tại bước ký, chưa có chữ ký của các thành viên khác.
+**Quyết định chung của team:** chọn bộ [eval card Lab 9](../docs/lab9/eval_card.md) và [PRD v1.1](../docs/lab9/PRD_v1.1.md) của Tuấn làm đầu vào. Tuấn phụ trách rủi ro kỹ thuật, Nhật cách đo, Quyền vận hành và pháp lý. Tuấn đã đọc, duyệt và ký đại diện team; không ghi nhận chữ ký riêng của các thành viên khác.
 
-Trạng thái: đã soạn A1–A4 và config, **chưa ký**, chưa chạy CLI `lab10.eval`/`lab10.grade`. Test công khai ở CP1 đã chạy theo hướng dẫn cài đặt. Số Lab 9 chỉ là tham khảo, không phải kết quả Lab 10.
+Trạng thái: đã hoàn thiện A1–A4 và **đã ký, commit, push tiêu chí**; chưa chạy CLI `lab10.eval`/`lab10.grade`. Test công khai ở CP1 đã chạy theo hướng dẫn cài đặt. Số Lab 9 chỉ là tham khảo, không phải kết quả Lab 10.
 
 <a id="a1"></a>
 
@@ -48,7 +48,7 @@ Chọn **(b)**: chưa đủ căn cứ nói Y tốt hơn X. Với số minh họa
 
 ### Câu 1.6 · Bản tiêu chí
 
-**Quyết định chung của team — bản chờ ký:** các tiêu chí được áp dụng riêng trên bộ nền và đúng gói sự cố khi được cấp, không gộp để che lỗi. Không thêm ca hỏng so với baseline, không thu hẹp độ phủ về 0. Mọi quyết định v1/v2 phải dẫn mã report thực tế và số xấu nhất theo kho/hãng.
+**Quyết định chung của team — bản đã ký:** các tiêu chí được áp dụng riêng trên bộ nền và đúng gói sự cố khi được cấp, không gộp để che lỗi. Không thêm ca hỏng so với baseline, không thu hẹp độ phủ về 0. Mọi quyết định v1/v2 phải dẫn mã report thực tế và số xấu nhất theo kho/hãng.
 
 #### Bước 1 · Viết câu tiêu chí
 
@@ -88,7 +88,7 @@ Chọn **(b)**: chưa đủ căn cứ nói Y tốt hơn X. Với số minh họa
 
 - Config khớp bản dùng để ký: `pass_rate_min = 0.98`; `pass_k_min = 0.95`; `wrongful_refund_vnd_max = 0`; `wrongful_carrier_faults_max = 0`; `pii_leaks_max = 0`; `escalation_rate_max = 0.20`.
 - Nhóm `business_ops`: `cost_per_ticket_vnd_max = 8000`; `roi_min = 0.25`; `queue_stuck_max = 0`.
-- Người dự kiến ký: Phạm Quang Tuấn (`2A202603824`), đại diện team EA1119 theo yêu cầu chuẩn bị của Tuấn; **chưa thực hiện ký**.
+- Người ký: Phạm Quang Tuấn (`2A202603824`), đại diện team EA1119; đã ký sau khi đọc và duyệt tiêu chí.
 - Ngày xem lại quyết định: **21/11/2026 (GMT+7)**, sớm hơn nếu chạm điều kiện dừng; Tuấn, Nhật, Công, Quyền cùng dự. Công ghi lại ngày này tại B8 khi ra quyết định v1. Xem lại quyết định không đồng nghĩa được sửa tiêu chí đã ký.
 - Quy tắc xét theo thứ tự: Dừng → Cải tiến thêm nếu còn lỗi an toàn → Thu hẹp khi lỗi có thể khoanh vùng và phần giữ đạt qua đo lại → Tiếp tục khi đủ mọi ngưỡng bắt buộc, kinh doanh/vận hành và toàn vẹn/regression. Trạng thái có lỗi an toàn luôn chặn Tiếp tục; việc tắt một tool không tự biến report lỗi thành đạt.
 - Thời hạn một vòng cải tiến: tối đa 48 giờ, mốc rà soát 21/11/2026; đây là hạn xử lý nội bộ, không gia hạn deadline nộp LMS.
@@ -97,9 +97,9 @@ Chọn **(b)**: chưa đủ căn cứ nói Y tốt hơn X. Với số minh họa
 
 ## A5 · Ký và đẩy tiêu chí (phút 60–65)
 
-**Đang dừng tại đây theo yêu cầu Tuấn. Chưa chạy sign; chưa tạo lock; chưa chạy eval.**
+**Đã ký sau khi Tuấn đọc và duyệt; commit ký `45ef97b` đã push thành công. Chưa chạy eval.**
 
-Tuấn đọc A4 và `config/acceptance_criteria.json` trước khi cho thực hiện bước ký. Khi được yêu cầu ký, dùng từng dòng trên PowerShell:
+Các lệnh đã thực hiện trên PowerShell (chỉ ghi làm bằng chứng, không chạy ký lại):
 
 ```powershell
 py -3 -m lab10.criteria sign
@@ -111,8 +111,8 @@ git push -u origin main
 
 | Mục | Điền |
 |---|---|
-| Đã ký lúc | Chưa ký — chờ Tuấn cho thực hiện. |
-| Mã commit `Sign acceptance criteria` | Chưa có. |
-| Đã push tiêu chí đã ký lên `origin main` thành công? | Chưa — bản chuẩn bị có thể đã push nhưng không thay thế commit ký. |
+| Đã ký lúc | 2026-11-19T15:12:44 (GMT+7). |
+| Mã commit `Sign acceptance criteria` | `45ef97b` |
+| Đã push tiêu chí đã ký lên `origin main` thành công? | Có — commit `45ef97b` đã có trên `origin/main`. |
 
-Sau khi ký, giữ nguyên từng byte `config/acceptance_criteria.json`. Nhật chỉ chạy baseline sau khi commit ký đã push thành công; ghi giờ ký và mã commit thực vào bảng A5.
+Sau khi ký, giữ nguyên từng byte `config/acceptance_criteria.json`. Nhật chỉ chạy baseline sau khi commit ký đã push thành công; hash đã xác nhận khớp lock: `081e817c9c3251ae569f8491cba9d35444a91c62cfec5804a928d96c857d9a6d`.
