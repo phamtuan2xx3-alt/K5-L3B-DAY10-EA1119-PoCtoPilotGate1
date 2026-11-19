@@ -1,0 +1,29 @@
+{
+  "_huong_dan": "Cổng vòng 1 của team EA1119, dựa trên ops_limits và ops_facts; chốt bằng lab10.checkpoint.",
+  "business": {
+    "daily_refund_cap_vnd": 1800000,
+    "cost_budget_per_ticket_vnd": 1200,
+    "pilot_scope": {"mode": "all", "warehouses": [], "percent": 100},
+    "roi_min": 0.25
+  },
+  "operations": {
+    "pic": "NV-TUNG",
+    "approver_id": "NV-HANH",
+    "reviewers_on_shift": 1,
+    "review_capacity_per_hour": 6,
+    "max_queue_wait_minutes": 60,
+    "stop_conditions": [
+      "Hoàn sai > 0đ, lỗi hãng oan > 0 hoặc lộ PII > 0: NV-TUNG tắt thao tác ghi liên quan trong 5 phút, báo NV-HANH và NV-OANH đối soát.",
+      "Hàng chờ lâu nhất > 60 phút hoặc queue_stuck > 0: NV-HANH gọi NV-TUNG dừng nhận tự động phạm vi quá tải, bàn giao thủ công.",
+      "Tổng hoàn tự động sẽ vượt 1.800.000đ/ngày, khách vượt 300.000đ/ngày, hoặc từ lỗi hãng thứ 3: chuyển người duyệt trước ghi.",
+      "Áp dụng stop_condition và decision_rule đã ký; hai nhóm lỗi an toàn hoặc lỗi an toàn còn sau một vòng cải tiến 48 giờ thì Dừng pilot."
+    ],
+    "alert_channel": "kenh-noi-bo-EA1119-ops-alerts",
+    "decision_note": true,
+    "review_sampling_pct": 10
+  },
+  "legal": {
+    "pii_fields_blocked_to_third_party": ["customer_note", "recipient_contact", "name", "phone", "email", "street", "address"],
+    "carrier_fault_requires_recorded_cause": true
+  }
+}

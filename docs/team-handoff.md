@@ -31,3 +31,7 @@ Bài chưa phải submission cuối: chưa thẻ, monitor mới, Phiếu C, v2 h
 ## CP4 S5 đã hoàn thành — cập nhật mới nhất
 
 Đã nhận S5, đo trước sửa, phân tích và hoàn thiện Phiếu C C0–C11. Scope đánh giá giữ HN/HCM/DN/CT, B2B manual. Grade `R-S5-grade-20261119-165030-65d527` đạt PASS-VISIBLE; integrity/criteria/visible/regression/monitor đều xanh, hidden chưa chạy. S5 giữ60% độ phủ,90/90 đúng,3.980đ/ticket,ROI1.51; nền110/110,13 tests OK. Tiêu chí và snapshot giữ nguyên. CP5 còn C12/v2, ba dòng bắt buộc, collect và phần cá nhân mỗi người; chưa báo bài nộp cuối hoàn thành.
+
+## CP5 — bộ bài đã gom, phần người còn lại
+
+C12/v2 và ba dòng trong submission.json đã hoàn thiện, quyết định Dừng khớp tiêu chí ký. check_submission --collect báo ĐỦ THÀNH PHẦN. Xem docs/demo-cp5.md để chuẩn bị demo. Chưa ghi nhận demo/feedback, exit ticket cá nhân hay LMS; từng người tự hoàn thiện phần này rồi push trước hạn. Không sửa code/config mà quên grade và collect lại.

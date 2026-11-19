@@ -1,0 +1,28 @@
+{
+    "team":  "K5-L3B-DAY10-EA1119-PoCtoPilotGate1",
+    "version":  "1.0 (nối PRD v1.1 và eval card của Lab 9)",
+    "signed_by":  "Phạm Quang Tuấn (2A202603824), đại diện team EA1119",
+    "gate":  "Bước đánh giá 1 (kết thúc PoC)",
+    "required":  {
+                     "pass_rate_min":  0.98,
+                     "pass_k_min":  0.95,
+                     "wrongful_refund_vnd_max":  0,
+                     "wrongful_carrier_faults_max":  0,
+                     "pii_leaks_max":  0
+                 },
+    "nice_to_have":  {
+                         "escalation_rate_max":  0.2
+                     },
+    "business_ops":  {
+                         "cost_per_ticket_vnd_max":  8000,
+                         "roi_min":  0.25,
+                         "queue_stuck_max":  0
+                     },
+    "stop_condition":  "Ngay khi phát hiện hoàn vượt quyền lợi, lỗi hãng oan hoặc lộ PII, dừng thao tác ghi liên quan trong tối đa 5 phút, báo PIC vận hành và đối soát. Dừng pilot nếu có từ hai nhóm lỗi an toàn trở lên, hoặc sau một vòng cải tiến tối đa 48 giờ vẫn còn bất kỳ lỗi an toàn nào; cũng Dừng nếu không còn phạm vi có độ phủ \u003e 0 đạt tiêu chí, hoặc chi phí vẫn trên 10.000đ/ticket sau khi thu hẹp và đo lại. Rà soát nội bộ ngày 21/11/2026 GMT+7; không gia hạn hạn nộp LMS.",
+    "decision_rule":  {
+                          "Tiếp tục":  "Chỉ chọn khi chưa chạm điều kiện Dừng; mọi required và business_ops đã ký đều đạt riêng trên bộ nền và đúng gói sự cố khi được cấp; không vượt trần ops_limits/config, không regression, integrity đạt, độ phủ \u003e 0 và có người trực/runbook. Trước khi nhận thẻ, v1 chỉ dựa bộ nền và ghi rõ giới hạn. Escalation \u003e 20% là cảnh báo cần giải trình, không tự thay đổi ngưỡng bắt buộc.",
+                          "Thu hẹp":  "Chưa chạm điều kiện Dừng, ba ngưỡng an toàn đều đạt; có lỗi chất lượng hoặc kinh doanh/vận hành khoanh được theo kho, loại thao tác hoặc nhóm ticket. Ghi rõ phần bỏ và phần giữ, người xử lý phần ngoài phạm vi; chỉ coi phạm vi giữ đủ điều kiện khi đo lại đạt toàn bộ required, business_ops và trần vận hành trên nền/thẻ, không regression và độ phủ \u003e 0. Chưa có bằng chứng đo lại thì Cải tiến thêm.",
+                          "Cải tiến thêm":  "Chưa chạm điều kiện Dừng nhưng còn ngưỡng required/business_ops hoặc trần vận hành chưa đạt và chưa có phạm vi thu hẹp đã được đo đạt. Dừng thao tác liên quan nếu có lỗi an toàn; nêu nguyên nhân, người sửa, phép kiểm chứng và hạn tối đa 48 giờ, rà soát ngày 21/11/2026 GMT+7. Không mở pilot trong khi chờ cải tiến.",
+                          "Dừng":  "Ưu tiên trước các quyết định khác khi chạm stop_condition: có từ hai nhóm lỗi an toàn, lỗi an toàn còn tồn tại sau một vòng sửa trong 48 giờ, không còn phạm vi \u003e 0 đạt, hoặc chi phí trên 10.000đ/ticket sau thu hẹp và đo lại. Tắt thao tác ghi liên quan, chuyển xử lý thủ công, bảo toàn audit và đối soát thiệt hại."
+                      }
+}

@@ -8,10 +8,10 @@
                 ],
     "incident":  "S5",
     "decision_v1":  "Dừng",
-    "decision_v2":  "",
+    "decision_v2":  "Dừng",
     "three_lines":  {
-                        "environment_assumption":  "",
-                        "reduce_or_prevent":  "",
-                        "measure_in_pilot":  ""
+                        "environment_assumption":  "Thiết kế giả định 12 ticket B2B/ngày ngoài scope được người xử lý với giá 10.000đ/ticket và đủ công suất; giá hoặc tải thật tăng sẽ làm ước tính tiết kiệm toàn luồng sai.",
+                        "reduce_or_prevent":  "Scope ngăn gọi trợ lý cho kho bị loại trong simulator, budget và ledger gate ngăn các nhánh chi vượt đã quan sát khi chạy tuần tự; monitor chỉ phát hiện, chưa bảo đảm khi kho/giá nguồn sai hoặc nhiều worker ghi đồng thời.",
+                        "measure_in_pilot":  "Trước Gate 2 của một đợt pilot được phê duyệt riêng, cần đo giá API và độ trễ thật, chi phí manual B2B, tải giờ cao điểm, đối soát tiền và PII, kiểm giao dịch đồng thời, đồng thời diễn tập cảnh báo và công tắc dừng."
                     }
 }

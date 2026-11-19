@@ -181,38 +181,39 @@ Scope ngăn gọi agent cho B2B theo warehouse gốc; budget giới hạn chi ph
 
 <a id="c12"></a>
 
-## C12 · Quyết định Gate 1 · v2 (phút 185–200)
+## C12 · Quyết định Gate 1 · v2
 
-Quyết định phải khớp bằng chứng và khớp tiêu chí đã ký. Chọn **Tiếp tục** khi report còn dòng vượt trần, hoặc còn ngưỡng đã ký
-chưa đạt, là quyết định không đạt. **Thu hẹp**, **Cải tiến thêm**, **Dừng** có lý do và có số thì đều là quyết định đạt.
-Cột v1 nằm ở Phiếu B mục B8; không sửa cột đó.
+**Quyết định chung của team: DỪNG pilot, giữ so với v1.** Đây là quyết định không triển khai thật, không phủ nhận các cải thiện của bản sửa trong môi trường mock. Giữ nguyên v1 và tiêu chí đã ký.
 
-| | **v2** (phút 185–200, SAU sự cố) |
+| Mục | v2 |
 |---|---|
-| Commit ký tiêu chí | phải giống v1 |
-| Hash chốt cổng vòng 1 | phải giống v1 |
-| Mã lần chạy dùng làm bằng chứng | thẻ, mốc base: ________ · prepared: ________ · after: ________ |
-| Còn dòng "vượt trần" nào trong report? (hàng chờ, chi phí, ROI, trần tiền, pháp lý) | |
-| Kho hoặc hãng có số xấu nhất: ____. Nếu chỉ nhìn phân khúc này, quyết định có đổi không? *(Khối "theo kho và hãng" trong output `lab10.eval` / `lab10.grade`, hoặc mục `by_segment` trong `report.json`.)* | |
-| Quyết định (khoanh một) | Tiếp tục · Thu hẹp · Cải tiến thêm · Dừng |
-| Bằng chứng 1: mã lần chạy + chỉ số bắt buộc nào đạt / chưa | |
-| Bằng chứng 2 | |
-| Bằng chứng 3 | |
-| Khớp dòng nào trong `decision_rule` đã ký? | |
-| Nếu Thu hẹp: cắt kho nào / còn bao nhiêu phần trăm / mấy người trực, và ticket bị cắt đi đâu | |
-| Nếu Cải tiến thêm: giả thuyết cụ thể (nhánh nào của fault tree) + hạn | |
-| Nếu Dừng: bài học ghi lại | |
-| Ngày quyết định lại (trừ khi Dừng) | |
-| PIC ký | |
+| Commit ký tiêu chí | `45ef97b`, hash `081e817c9c3251ae569f8491cba9d35444a91c62cfec5804a928d96c857d9a6d` |
+| Hash chốt vòng1 | `fdb61587fed47f033c198ba3b30881bdef7f7cfe7801ad555c61df92700c9a9e` |
+| Run S5 | base `R-S5-before-20261119-165031-65d527`; prepared `R-S5-prepared-20261119-165032-65d527`; after `R-S5-after-20261119-165032-65d527` |
+| Grade | `R-S5-grade-20261119-165030-65d527` — PASS-VISIBLE; hidden chưa chạy |
+| Vượt trần after | Không; required/business_ops đạt trên nền và phần S5 giữ lại. Nền escalation22,73% vẫn vượt nice-to-have20%, đã giải trình; không che bằng số16,67% của S5. |
+| Kho/hãng xấu nhất | S5 phần giữ HN4.277đ/ticket, pass1.0, mọi hãng lỗi an toàn0. B2B prepared10.382đ>10.000đ đã chuyển manual, không nằm trong chi phí after. Nền nhóm?10.359đ vẫn cần đối soát. Chỉ nhìn phân khúc không làm team đổi từ Dừng sang Tiếp tục. |
+| Quyết định | **Dừng** |
+| Bằng chứng1 | S5 base hoàn sai890.000đ/150 trial và20 fault oan; baseline nền từng hoàn sai20.000đ và1 fault oan. Hai nhóm an toàn đã chạm stop_condition. |
+| Bằng chứng2 | S5 after90/90 lượt, pass_rate/pass_k1.0; hoàn sai/under-refund/fault oan/PII0; nền110/110, không regression. Prepared S5 đã an toàn trước khi biết thẻ nhưng vẫn còn chi phí kho âm. |
+| Bằng chứng3 | Phần giữ S5: độ phủ0.6,18 ticket/ngày,12 ngoài scope, chi phí3.980đ, ROI1.51, ùn0, maxwait0 phút, LLM max765đ. Không gán ROI1.51 cho cả30 ticket. |
+| Khớp decision_rule | Dừng ưu tiên khi chạm stop_condition hai nhóm an toàn. Bản ký không cho miễn trừ lịch sử sau khi sửa; không nới tiêu chí. |
+| Nếu Thu hẹp | Không chọn nhãn quyết định này; kỹ thuật đã thu scope còn60%,1 người trực, B2B12 ca/ngày đi manual. Đây là cấu hình ứng viên offline, chưa được phép chạy thật. |
+| Nếu Cải tiến thêm | Không áp dụng nhãn; các rủi ro dữ liệu/tải/concurrency/giá thật phải xử lý trước một đề xuất pilot mới. |
+| Nếu Dừng: bài học | Chất lượng trung bình cao vẫn có thể che chi sai, fault oan và kho lỗ. Cổng an toàn và báo cáo kinh tế theo phân khúc đều cần; viết rõ điều kiện reset ở phiên bản tương lai, không sửa bản hiện tại. |
+| Ngày quyết định lại | Không áp dụng với Dừng. Mốc21/11/2026 là rà soát bài học nội bộ, không gia hạn LMS hoặc tự cấp phép mở lại. |
+| PIC ký | Phạm Quang Tuấn (2A202603824), đại diện team EA1119; không tạo chữ ký của người khác. |
 
-**Chỉ ở v2**
-- Quyết định đổi hay giữ so với v1? Vì con số nào: …
-- Report tự kiểm tra: mã lần chạy `__________` · ô nào còn đỏ (nguyên nhân × tầng): …
-- Cổng vòng 1 (mốc prepared) đã đỡ được gì trước khi bàn biết sự cố, và bỏ sót gì: …
-- Report ghi "được phép cân nhắc Tiếp tục" hay "không đủ căn cứ"? Quyết định của bàn có khớp không: …
-- Một thứ bộ thử hôm nay chưa đo, và nó ảnh hưởng quyết định ra sao: …
+### Chỉ ở v2
 
-**Ba dòng bắt buộc** (chép nguyên ba câu này sang `submission/submission.json`, mục `three_lines`)
-1. Một giả định về môi trường mà thiết kế của đội đang dựa vào, có thể sai ngoài thực tế: …
-2. Gate của đội chỉ GIẢM khả năng hay thực sự NGĂN được tác hại? Vì sao: …
-3. Vì data là mock, cần đo lại gì trong pilot thật trước Bước đánh giá 2: …
+- Giữ Dừng so với v1: S5 xác nhận base cũng có hai nhóm lỗi an toàn; bản sửa cải thiện chất lượng và economics nhưng không hủy trigger ký trước.
+- Grade không còn ô đỏ công khai; hidden chưa có. PASS-VISIBLE không phải điểm chấm cuối và không phải phép triển khai production.
+- Prepared đã chặn toàn bộ890.000đ hoàn sai,20 lỗi hãng oan và giảm max LLM2.412→765đ trên S5; bỏ sót B2B chi phí kép10.382đ/ticket. Vòng2 thêm scope routing và monitor để xử lý đúng nhánh kinh doanh.
+- Máy ghi “Được phép cân nhắc Tiếp tục”; đây là kết luận các ngưỡng số hiện tại, không thay thế stop_condition/decision_rule dạng văn bản. Team chọn Dừng thận trọng và khớp điều kiện đã ký.
+- Chưa đo hidden, model thật, công suất manual B2B và race ledger; do đó không khẳng định sẵn sàng pilot dù after xanh.
+
+### Ba dòng bắt buộc
+
+1. Thiết kế giả định 12 ticket B2B/ngày ngoài scope được người xử lý với giá 10.000đ/ticket và đủ công suất; giá hoặc tải thật tăng sẽ làm ước tính tiết kiệm toàn luồng sai.
+2. Scope ngăn gọi trợ lý cho kho bị loại trong simulator, budget và ledger gate ngăn các nhánh chi vượt đã quan sát khi chạy tuần tự; monitor chỉ phát hiện, chưa bảo đảm khi kho/giá nguồn sai hoặc nhiều worker ghi đồng thời.
+3. Trước Gate 2 của một đợt pilot được phê duyệt riêng, cần đo giá API và độ trễ thật, chi phí manual B2B, tải giờ cao điểm, đối soát tiền và PII, kiểm giao dịch đồng thời, đồng thời diễn tập cảnh báo và công tắc dừng.
