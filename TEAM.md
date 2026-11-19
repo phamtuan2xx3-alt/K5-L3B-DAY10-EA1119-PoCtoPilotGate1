@@ -43,7 +43,9 @@ Commit ký `45ef97b`; commit cổng vòng 1 `d3a6a0f`; snapshot `fdb61587`; `doc
 
 ### Exit ticket
 
-Chờ thành viên tự ghi một điều học được và một điều còn chưa chắc.
+Một điều học được: Pass rate cao vẫn có thể che lỗi chi tiền và ghi oan hãng; cổng kiểm soát phải đối chiếu tracking, chính sách và ledger trước khi ghi.
+
+Một điều còn chưa chắc: Cổng chống hoàn lặp hiện chạy đúng trong mô phỏng tuần tự; khi nhiều worker cùng xử lý một đơn, cần thêm transaction hoặc idempotency ở DB để tránh chi trùng.
 
 ## ChuVanNhat-2A202603848
 
